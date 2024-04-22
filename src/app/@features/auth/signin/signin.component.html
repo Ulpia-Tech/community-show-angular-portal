@@ -1,0 +1,36 @@
+<div class="wrapper">
+
+  <div class="signin-wrapper">
+
+    <div class="signin-header">
+      <img class="app-logo" src="assets/images/nancyvet-logo.png">
+      <div class="app-title">
+        <span class="c-blue">Vet Manager</span>
+      </div>
+    </div>
+
+    <div class="signin-content">
+
+      <div>
+
+        <label class="input-label mt16" for="username">E-mail / Username</label>
+        <input [(ngModel)]="ui.username" class="input-text mt8" id="username" type="text">
+
+        <label class="input-label mt16" for="password">Password</label>
+        <input [(ngModel)]="ui.password" class="input-text mt8" id="password" type="password">
+      </div>
+
+      <div class="btn btn--full mt16" (click)="processForm()">
+        Sign up
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+<!-- <input [(ngModel)]="ui.username" type="text" placeholder="username">
+<input [(ngModel)]="ui.password" type="text" placeholder="password">
+<button (click)="processForm()"></button> -->

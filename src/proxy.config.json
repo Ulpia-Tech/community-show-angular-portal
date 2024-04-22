@@ -1,0 +1,12 @@
+{
+  "/oauth": {
+    "target"        : "https://auth.reltio.com",
+    "secure"        : true,
+    "changeOrigin"  : true
+  },
+  "/api": {
+    "target"        : "https://test-usg.reltio.com/reltio",
+    "secure"        : true,
+    "changeOrigin"  : true
+  }
+}

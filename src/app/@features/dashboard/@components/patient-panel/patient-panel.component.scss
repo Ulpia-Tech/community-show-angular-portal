@@ -1,0 +1,40 @@
+.wrapper {
+  width   : 960px;
+  margin  : auto;
+}
+
+.title {
+  font-weight   : bold;
+  font-size     : 22px;
+  margin-top    : 16px;
+  margin-bottom : 16px;
+}
+
+.table {
+  font-family     : Arial, Helvetica, sans-serif;
+  border-collapse : collapse;
+  width           : 100%;
+}
+
+.table td, .table th {
+  border    : 1px solid #ddd;
+  padding   : 8px;
+  border    : none;
+}
+
+.table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.table tr:hover {
+  background: #ddd;
+}
+
+.table th {
+  padding-top     : 12px;
+  padding-bottom  : 12px;
+  text-align      : left;
+  background      : #f1bebc;
+  color           : 000;
+  font-weight     : bold;
+}
