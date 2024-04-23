@@ -1,35 +1,45 @@
 import { Component, inject      } from '@angular/core';
 import { SearchComponent        } from '../../@shared/search/search.component';
 import { CustomerApi            } from '../../@shared/api/customer.api';
-import { MedicalRecordApi       } from '../../@shared/api/medicat_record.api';
+import { MedicalRecordApi       } from '../../@shared/api/medicat-record.api';
 import { PatientPanelComponent  } from './@components/patient-panel/patient-panel.component';
+import { MedicalRecordPanelComponent } from './@components/medical-record-panel/medical-record-panel.component';
+
+import { MedicalRecordService } from '../../@shared/services/medical-record.service';
+import { PatientApi } from '../../@shared/api/patient.api';
 
 @Component({
   selector    : 'page-dashboard',
   templateUrl : './dashboard.component.html',
   styleUrl    : './dashboard.component.scss',
   standalone  : true,
-  imports     : [SearchComponent, PatientPanelComponent]
+  imports     : [SearchComponent, PatientPanelComponent, MedicalRecordPanelComponent]
 })
 export class DashboardPage {
 
   private $customerApi: CustomerApi           = inject(CustomerApi);
-  private $medicalRecordApi: MedicalRecordApi = inject(MedicalRecordApi);
+  private $patientApi: PatientApi           = inject(PatientApi);
 
-  public ngOnInit() {
+  private medicalRecordService: MedicalRecordService = inject(MedicalRecordService);
 
-    this.$customerApi.getAllCustomers().subscribe((aaa) => {
+  public async ngOnInit() {
 
-      console.log("All customers");
+    this.$patientApi.getAllPatients().subscribe((data) => {
+
+      console.log("All patients");
       console.log(".............");
-      console.log(aaa);
+      console.log(data);
     });
 
-    this.$medicalRecordApi.getAllMedicalRecords().subscribe((aaa) => {
+    // this.$customerApi.getAllCustomers().subscribe((aaa) => {
 
-      console.log("All customers");
-      console.log(".............");
-      console.log(aaa);
-    });
+    //   console.log("All customers");
+    //   console.log(".............");
+    //   console.log(aaa);
+    // });
+
+    // //
+    // const collection = await this.medicalRecordService.getMedicalRecords();
+    // console.log(collection);
   }
 }

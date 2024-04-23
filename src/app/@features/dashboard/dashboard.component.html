@@ -1,12 +1,24 @@
 <div class="wrapper">
   <app-search></app-search>
 
-  <div class="title">Recent patients</div>
-  <patient-panel></patient-panel>
+  <div>
+    <div style="display: flex; justify-content: space-between;">
+      <div class="title">Recent patients</div>
+      <div class="button">List all</div>
+    </div>
 
-  <div>Recent medical records</div>
-  <!-- <medical-record-panel></medical-record-panel> -->
+    <patient-panel></patient-panel>
+  </div>
 
+  <div style="margin-top: 32px;">
+
+    <div style="display: flex; justify-content: space-between;">
+      <div class="title">Recent medical records</div>
+      <div class="button">List all</div>
+    </div>
+
+    <medical-record-panel></medical-record-panel>
+  </div>
 
 </div>
 

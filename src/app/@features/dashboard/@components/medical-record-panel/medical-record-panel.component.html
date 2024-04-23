@@ -1,9 +1,34 @@
-<div style="display: flex;">
+<div style="display: flex; justify-content: space-between;">
 
-  @for (item of collection; track $index) {
+  @for (record of collection; track $index) {
 
     <div class="box">
 
+      <div class="flex">
+        <div class="status">{{record.status}}</div>
+      </div>
+
+      <div style="margin-top: 16px;" class="flex">
+        <div class="label">MR Number</div>
+        <div class="value">{{record.id}}</div>
+      </div>
+      <div class="flex">
+        <div class="label">Patient Name</div>
+        <div class="value">{{record.patientName}}</div>
+      </div>
+      <div class="flex">
+        <div class="label">Owner Name</div>
+        <div class="value">{{record.ownerName}}</div>
+      </div>
+      <div class="separator"></div>
+      <div class="flex">
+        <div class="label">Sevirity</div>
+        <div class="value">{{record.sevirity}}</div>
+      </div>
+      <div class="flex">
+        <div class="label">Type</div>
+        <div class="value">{{record.type}}</div>
+      </div>
     </div>
   }
 

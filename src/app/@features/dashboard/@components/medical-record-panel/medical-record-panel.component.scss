@@ -1,0 +1,31 @@
+.label {
+  width: 150px;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.value {
+  margin-top: 8px;
+}
+
+.flex {
+  display: flex;
+}
+
+.box {
+  background: #fff;
+  padding: 16px;
+  box-shadow: #dedede 2px 2px 5px;
+  border: solid #dedede 1px;
+}
+
+.status {
+  background: #c1ef5c;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.separator {
+  margin: 16px 0;
+  border: solid #dedede 1px;
+}

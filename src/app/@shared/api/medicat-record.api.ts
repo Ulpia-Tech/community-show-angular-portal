@@ -16,7 +16,7 @@ export class MedicalRecordApi {
 
     return this.http.post(`api/entities/_search`, {
       "filter": "(equals(type,'configuration/entityTypes/medical_record'))",
-    })
+    });
   }
 
   public updateAttribute(attributeUri: string, value: any) {

@@ -17,7 +17,7 @@ export class PatientApi {
   public getAllPatients() {
 
     return this.http.post(`api/entities/_search`, {
-      "filter": "(equals(type,'configuration/entityTypes/patient'))",
+      "filter": "(equals(type,'configuration/entityTypes/Patient'))",
     });
   }
 }
